@@ -9,7 +9,7 @@ import { HttpService } from "./http.service";
 export class AppComponent {
   title = "OneShop";
 
-  constructor(private _http: HttpService) { }
+  constructor(private _http: HttpService) {}
 
   ngOnInit() {
     localStorage.clear();

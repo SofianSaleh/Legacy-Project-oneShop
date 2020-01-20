@@ -18,7 +18,6 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   getProducts(id: String) {
-    console.log(id);
     return this.http.get(`http://localhost:8080/api/products/${id}`);
     //now go to the home component
   }

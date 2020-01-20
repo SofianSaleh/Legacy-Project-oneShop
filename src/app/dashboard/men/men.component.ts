@@ -40,7 +40,6 @@ export class MenComponent implements OnInit {
         this.http
           .delete(`http://localhost:8080/api/delete/product/${id}`)
           .subscribe(data => {
-            console.log(data);
             if (data["success"]) {
               this.ngOnInit();
             }

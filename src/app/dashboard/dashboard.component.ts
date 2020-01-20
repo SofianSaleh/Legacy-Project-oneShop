@@ -11,7 +11,6 @@ export class DashboardComponent implements OnInit {
   constructor(private variable: VariablesService, private router: Router) {}
 
   ngOnInit() {
-    console.log(this.variable.userInfo);
     if (this.variable.userInfo["userType"] !== "Admin") {
       this.router.navigate([""]);
     }

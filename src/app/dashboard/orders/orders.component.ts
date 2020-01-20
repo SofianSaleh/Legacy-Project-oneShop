@@ -19,7 +19,6 @@ export class OrdersComponent implements OnInit {
       .get("http://localhost:8080/api/orders")
       .subscribe((response: any[]) => {
         this.order = response;
-        console.log(this.order);
       });
   }
 
@@ -27,7 +26,6 @@ export class OrdersComponent implements OnInit {
     return this.http
       .get(`http://localhost:8080/api/getUserById/${id}`)
       .subscribe((response: any[]) => {
-        // console.log(response["name"]);
         return response["name"];
       });
   }

@@ -37,16 +37,13 @@ export class StatisticsComponent implements OnInit {
           username: this.users[i]["name"],
           orders: results
         });
-        // console.log(this.userLogs);
       });
-    // return;
   }
 
   sort() {
     this.userLogs = this.userLogs.sort(
       (a, b) => b["orders"].length - a["orders"].length
     );
-    console.log(this.userLogs);
   }
 
   getOrder() {
@@ -68,23 +65,13 @@ export class StatisticsComponent implements OnInit {
   }
 
   compare() {
-    // console.log(this.allProducts);
-    // console.log(this.orders);
-    // for (var m = 0; m < this.allProducts.length; m++) {
-
-    // }
-
     for (let j = 0; j < this.orders.length; j++) {
       for (let k = 0; k < this.orders[j].products.length; k++) {
-        // console.log(this.orders[j].products[1]);
-        // for (let l = 0; l < this.orders[j].products[l].length; l++) {
-        // console.log(this.orders[j].products[k].product.title);
         if (this.obj[this.orders[j].products[k].product.title] === undefined) {
-          this.obj[`${this.orders[j].products[k].product.title}`] = 0;
+          this.obj[`${this.orders[j].products[k].product.title}`] = 1;
         } else {
           this.obj[this.orders[j].products[k].product.title] += 1;
         }
-        // }
       }
     }
     for (var key in this.obj) {
@@ -93,7 +80,6 @@ export class StatisticsComponent implements OnInit {
     this.arrayOfTheMostSold = this.arrayOfTheMostSold.sort(
       (a, b) => b.count - a.count
     );
-    console.log(this.arrayOfTheMostSold);
-    // this.obj = this.obj.sort((a,b) => )
+    console.log(this.orders);
   }
 }

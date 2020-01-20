@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
 import { VariablesService } from "./../../variables.service";
-import * as moment from "moment";
+
 import { Router } from "@angular/router";
 
 @Component({
@@ -13,7 +13,7 @@ import { Router } from "@angular/router";
 export class CheckoutComponent {
   username: string = localStorage.username;
   obj: object;
-  now = moment().format("LLLL");
+
   form: FormGroup;
   countries = [
     {
@@ -123,7 +123,7 @@ export class CheckoutComponent {
 
   promCodes(pCode: string) {
     this.inputText = pCode;
-    console.log(this.inputText);
+    
     for (var i = 0; i < this.promoCodes.length; i++) {
       if (this.promoCodes[i]["key"] === pCode) {
         this.variable.sum = Math.abs(

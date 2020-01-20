@@ -37,7 +37,6 @@ export class UpdatFormComponent implements OnInit {
       description: this.form.get("ProductDescription").value,
       image: this.form.get("ProductImage").value
     };
-    console.log(this.variable.getProductId(), obj);
     this.http
       .put(
         `http://localhost:8080/api/update/product/${this.variable.getProductId()}`,

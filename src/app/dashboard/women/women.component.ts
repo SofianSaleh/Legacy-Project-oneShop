@@ -19,7 +19,6 @@ export class WomenComponent implements OnInit {
       .subscribe(
         (response: any[]) => {
           this.womenProducts = response;
-          console.log(this.womenProducts);
         },
         error => {
           console.log("");

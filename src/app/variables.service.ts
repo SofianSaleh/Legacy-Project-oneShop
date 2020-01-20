@@ -38,6 +38,5 @@ export class VariablesService {
   addItem(item) {
     this.items.push(item);
     this.sum += item.price;
-    console.log(this.sum, this.items);
   }
 }

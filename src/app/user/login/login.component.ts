@@ -61,7 +61,6 @@ export class LoginComponent implements OnInit {
               userType: response["userType"],
               token: response["token"]
             };
-            console.log(this.variable.userInfo);
             this.setToken();
           } else {
             this.router.navigate([""]);
